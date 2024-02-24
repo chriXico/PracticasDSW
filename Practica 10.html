@@ -1,0 +1,63 @@
+<html>
+<head>
+
+  <title>Practica 10</title>
+</head>
+<body>
+  <h1>Formulario de registro</h1>
+  <form action="" method="post">
+    <table cellpadding="5" cellspacing="2">
+      <tr>
+        <td>Nombre:</td>
+        <td><input type="text" name="nombre" maxlength="50" size="30" placeholder="Nombre" required></td>
+      </tr>
+      <tr>
+        <td>Apellidos:</td>
+        <td><input type="text" name="apellidos" maxlength="50" size="30" placeholder="Apellidos" required></td>
+      </tr>
+      <tr>
+        <td>Edad:</td>
+        <td><input type="number" name="edad" min="18" max="60" required></td>
+      </tr>
+      <tr>
+        <td>Sexo:</td>
+        <td>
+          <input type="radio" name="sexo" value="hombre" required> Hombre
+          <input type="radio" name="sexo" value="mujer" required> Mujer
+        </td>
+      </tr>
+      <tr>
+        <td>Correo:</td>
+        <td><input type="email" name="correo" size="30" placeholder="Correo electrónico" required></td>
+      </tr>
+      <tr>
+        <td>Contraseña:</td>
+        <td><input type="password" name="contrasena" size="30" placeholder="Contraseña" required></td>
+      </tr>
+      <tr>
+        <td>Población:</td>
+        <td>
+          <select name="poblacion" required>
+            <option value="Alicante" selected>Alicante</option>
+            <option value="Valencia">Valencia</option>
+            <option value="Madrid">Madrid</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Descripción:</td>
+        <td><textarea name="descripcion" rows="6" cols="30" placeholder="Escribe una descripción aquí"></textarea></td>
+      </tr>
+      <tr>
+        <td colspan="2"><input type="checkbox" name="informacion" checked required> Deseo recibir información sobre novedades y ofertas</td>
+      </tr>
+      <tr>
+        <td colspan="2"><input type="checkbox" name="condiciones" required> Declaro haber leído y aceptar las condiciones generales del programa y la normativa sobre protección de datos</td>
+      </tr>
+      <tr>
+        <td colspan="2"><input type="submit" name="enviar" value="Enviar"></td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>
