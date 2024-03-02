@@ -1,0 +1,47 @@
+
+*
+{
+    justify-content: space-between;
+}
+
+
+#header, #nav, #footer
+{
+  width: 100%;
+}
+
+#header, #footer
+{
+  height: 10%;
+  background: tomato;
+}
+#nav
+{
+  height: 5%;
+  background: pink;
+}
+
+.contenedor
+{
+    display: flex; /* Utiliza el modelo de caja flexible */
+    height: 65%; /* Altura del contenedor al 65% del cuerpo */
+    justify-content: space-around; /* Distribución uniforme de los elementos */
+    background-color: #f5f5dc;
+}
+
+#article, #section
+{
+    margin: 10;
+  height: 80%;
+justify-content: center;
+}
+#article
+{
+  width: 20%;
+  background: skyblue
+}
+#section
+{
+  width: 30%;
+  background: yellow;
+}
