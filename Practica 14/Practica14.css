@@ -1,0 +1,41 @@
+ /* Em */
+ .em {
+    font-size: 1.5em; 
+    margin-bottom: 1em; 
+}
+
+/* Ex */
+.ex {
+    font-size: 16px; 
+    line-height: 1.5ex; 
+}
+
+/* Rem */
+.rem {
+    font-size: 1.2rem; 
+    padding: 0.5rem; 
+}
+
+/* VW */
+#img4 {
+    width: 50vw;
+    height: 20vw; 
+}
+
+/* VH */
+#img1 {
+    width: 30vh; 
+    height: 10vh; 
+}
+
+/* VMIN */
+#img2 {
+    width: 20vmin; 
+    height: 15vmin; 
+}
+
+/* VMAX */
+#img3 {
+    width: 80vmax; 
+    height: 40vmax; 
+}
