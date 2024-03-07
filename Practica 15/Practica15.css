@@ -1,0 +1,51 @@
+tr:nth-child(2n){
+    background: rgb(70%, 15%, 18%);
+}
+
+/*
+tr:nth-last-child(2n+1){
+    background: rgb(70%, 95%, 18%);
+}
+*/
+
+section p:nth-last-child(2n){
+    background: rgb(70%, 95%, 18%);
+}
+
+ul li{
+    border-bottom: 1px dotted #000;
+}
+
+li:first-child{
+    border-top: 1px dotted #AF0;
+    background-color: #AF0;
+    border-bottom: none;
+    list-style-type: square;
+}
+
+li:last-child{
+    color: #FF0;
+    list-style-type: square;
+}
+
+a:link {
+    color: blue; /* Color del enlace no visitado */
+}
+a:visited {
+    color: purple; /* Color del enlace visitado */
+}
+
+/* :hover */
+a:hover {
+    text-decoration: underline; /* Subraya el enlace cuando se pasa el mouse sobre él */
+}
+
+/* :active */
+a:active {
+    color: red; /* Cambia el color del enlace cuando se hace clic en él */
+}
+
+/* :focus */
+input:focus {
+    background-color: lightgray; /* Cambia el fondo del input cuando recibe el foco */
+}
