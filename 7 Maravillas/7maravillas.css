@@ -20,6 +20,10 @@ h1{
     padding: 20px 30px;
 }
 
+a{
+    color: #fff;
+}
+
 header{
     width: 100%;
     background-color: #000;
