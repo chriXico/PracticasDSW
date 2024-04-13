@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Calcular Calificaciones</title>
+</head>
+<body>
+    <form id="formulario">
+        <label for="asignatura1">Implantación de Software:</label>
+        <input type="number" id="asignatura1" min="0" max="100" required><span id="asignatura1_error"></span><br><br>
+
+        <label for="asignatura2">Diseño de Sitios Web:</label>
+        <input type="number" id="asignatura2" min="0" max="100" required><span id="asignatura2_error"></span><br><br>
+
+        <label for="asignatura3">Programación con Python:</label>
+        <input type="number" id="asignatura3" min="0" max="100" required><span id="asignatura3_error"></span><br><br>
+
+        <label for="asignatura4">Desarrollo de Emprendedores:</label>
+        <input type="number" id="asignatura4" min="0" max="100" required><span id="asignatura4_error"></span><br><br>
+
+        <label for="asignatura5">Administración de Proyectos:</label>
+        <input type="number" id="asignatura5" min="0" max="100" required><span id="asignatura5_error"></span><br><br>
+
+        <label for="asignatura6">Programación Visual:</label>
+        <input type="number" id="asignatura6" min="0" max="100" required><span id="asignatura6_error"></span><br><br>
+
+        <label for="asignatura7">Administración de la Función Informática:</label>
+        <input type="number" id="asignatura7" min="0" max="100" required><span id="asignatura7_error"></span><br><br>
+
+        <label for="asignatura8">Lectura y Redacción en Inglés:</label>
+        <input type="number" id="asignatura8" min="0" max="100" required><span id="asignatura8_error"></span><br><br>
+        
+        <button type="button" onclick="calcularPromedio()">Calcular Calificaciones</button>
+    </form>
+
+    <script>
+        function calcularPromedio() {
+            var materias = ["asignatura1", "asignatura2", "asignatura3", "asignatura4", "asignatura5", "asignatura6", "asignatura7", "asignatura8"];
+            var suma = 0;
+            var calificacion;
+            var promedio;
+            var exento = false;
+            var mensaje = "";
+
+            for (var i = 0; i < materias.length; i++){
+                calificacion = document.getElementById(materias[i]).value;
+                if(calificacion === ""){
+                    document.getElementById(materias[i] + "_error").innerHTML = "Favor de ingresar la calificación para " + materias[i];
+                    document.getElementById(materias[i]).focus();
+                    return; // Detiene la ejecución si hay un campo vacío
+                } else {
+                    document.getElementById(materias[i] + "_error").innerHTML = ""; // Limpia el mensaje de error si el campo está lleno
+                    mensaje += "Calificacion de " + materias[i] + " : " + calificacion + ". ";
+                }
+                suma += parseFloat(calificacion);
+            }
+            promedio = suma / materias.length;
+
+            if (promedio > 85) {
+                exento = true;
+            }
+            alert(mensaje);
+            alert("El promedio final es " + promedio.toFixed(2) + '. ' + (exento ? "Estás exento de examen ordinario." : "Debes presentar examen ordinario."));
+        }
+    </script>
+</body>
+</html>
