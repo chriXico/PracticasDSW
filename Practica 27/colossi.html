@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="colossi.css">
+    <title>Los 16 colosos de SoTC</title>
+</head>
+<body>
+    <header>Los 16 colosos de SoTC</header>
+    <h1>¿Qué coloso es?</h1>
+
+    <!-- Pantalla inicial -->
+    <div id="pantalla-inicial">
+        <p>¿A qué coloso pertenece la imagen?</p>
+        <button class="btn" onclick="comenzarJuego()">JUGAR</button>
+        <button class="btn">
+        <a href="/PracticasDSW/7 Maravillas/7maravillas.html">JUEGO DE LAS 7 MARAVILLAS</a>
+        </button>
+    </div>
+    <!-- Este <div> representa la pantalla inicial del juego. Contiene un mensaje de 
+        bienvenida y un botón para comenzar a jugar. Cuando se hace clic en el botón, 
+        se llama a la función comenzarJuego() para iniciar el juego. -->
+
+
+    <!-- Pantalla juego -->
+    <div class="pantalla-juego" id="pantalla-juego">
+        <img src="img/valus.jpg" alt="" id="imgColossi">
+        <div class="opciones">
+            <div class="opcion" id="op0" onclick="comprobarRespuesta(0)">
+                <div class="letra" id="l0">A</div>
+                <div class="nombre" id="n0">OPCION A</div>
+            </div>
+            <div class="opcion" id="op1" onclick="comprobarRespuesta(1)">
+                <div class="letra" id="l1">B</div>
+                <div class="nombre" id="n1">OPCION B</div>
+            </div>
+            <div class="opcion" id="op2" onclick="comprobarRespuesta(2)">
+                <div class="letra" id="l2">C</div>
+                <div class="nombre" id="n2">OPCION C</div>
+            </div>
+            <div class="opcion" id="op3" onclick="comprobarRespuesta(3)">
+                <div class="letra" id="l3">D</div>
+                <div class="nombre" id="n3">OPCION C</div>
+            </div>
+        </div>
+    </div>
+<!-- Este <div> representa la pantalla de juego. Contiene la imagen del coloso actual 
+    y las opciones de respuesta para el jugador. Cada opción está representada por un <div> 
+    con su letra correspondiente y el nombre de la opción. Cuando se hace clic en una opción, 
+    se llama a la función comprobarRespuesta() con el índice de la opción seleccionada como argumento. -->
+
+
+    <!-- Pantalla final -->
+    <div id="pantalla-final">
+        <h2>CORRECTAS: <span id="numCorrectas">3</span></h2>
+        <h2>INCORRECTAS: <span id="numIncorrectas">2</span></h2>
+        <button class="btn" onclick="volverAlInicio()">VOLVER AL INICIO</button>
+    </div>
+<!-- Este <div> representa la pantalla final del juego. Muestra el número de respuestas correctas 
+    e incorrectas obtenidas por el jugador. También incluye un botón para volver al inicio del juego. 
+    Cuando se hace clic en el botón, se llama a la función volverAlInicio() para reiniciar el juego. -->
+    
+    <script src="colossi.js"></script>
+</body>
+</html>
